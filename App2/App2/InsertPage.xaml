@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.InsertPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Text="ID: " Grid.Column="0" Grid.Row="0" VerticalOptions="Center" IsVisible="False"/>
+            <Entry x:Name="Entry_Id" Grid.Column="1" Grid.Row="0" IsVisible="False"/>
+            <Label Text="Nombre: " Grid.Column="0" Grid.Row="1" VerticalOptions="Center"/>
+            <Entry x:Name="Entry_Nombre" Grid.Column="1" Grid.Row="1"/>
+            <Label Text="Apellido: " Grid.Column="0" Grid.Row="2" VerticalOptions="Center"/>
+            <Entry x:Name="Entry_Apellido" Grid.Column="1" Grid.Row="2"/>
+            <Button x:Name="Button_Insertar" Text="Insertar datos" Clicked="Button_Insertar_Clicked" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

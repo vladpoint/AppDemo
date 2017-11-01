@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.SelectPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Text="ID: " Grid.Column="0" Grid.Row="0" VerticalOptions="Center"/>
+            <Entry x:Name="Entry_Id" Text="{Binding Id}" Grid.Column="1" Grid.Row="0" IsEnabled="False"/>
+            <Label Text="Nombre: " Grid.Column="0" Grid.Row="1" VerticalOptions="Center"/>
+            <Entry x:Name="Entry_Nombre" Text="{Binding Dato1}" Grid.Column="1" Grid.Row="1"/>
+            <Label Text="Apellido: " Grid.Column="0" Grid.Row="2" VerticalOptions="Center"/>
+            <Entry x:Name="Entry_Apellido" Text="{Binding Dato2}" Grid.Column="1" Grid.Row="2"/>
+            <Button x:Name="Button_Actualizar" Text="Actualizar registro" Clicked="Button_Actualizar_Clicked" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
+            <Button x:Name="Button_Eliminar" Text="Eliminar registro" Clicked="Button_Eliminar_Clicked" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

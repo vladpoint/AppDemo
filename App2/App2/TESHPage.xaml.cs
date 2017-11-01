@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
 
 namespace App2
 {
@@ -15,6 +16,11 @@ namespace App2
 		public TESHPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
+        }
+    }
 }

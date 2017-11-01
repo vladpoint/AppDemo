@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App2.Android", "App2\App2.Android\App2.Android.csproj", "{A67851F6-6841-4617-9DA5-DCEEC958EF7C}"
 EndProject
@@ -196,10 +196,14 @@ Global
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.AppStore|x86.Build.0 = Release|x86
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.AppStore|x86.Deploy.0 = Release|x86
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|Any CPU.Build.0 = Debug|x86
+		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|ARM.ActiveCfg = Debug|ARM
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|ARM.Build.0 = Debug|ARM
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|ARM.Deploy.0 = Debug|ARM
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|iPhone.ActiveCfg = Debug|x86
+		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|iPhone.Build.0 = Debug|x86
+		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|iPhone.Deploy.0 = Debug|x86
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|x64.ActiveCfg = Debug|x64
 		{6DFFCEA7-45EB-4BA8-A82D-C335DCCFFA87}.Debug|x64.Build.0 = Debug|x64
@@ -236,6 +240,7 @@ Global
 		{6C35C7D3-7501-4274-8062-EF098BCBC3F9}.AppStore|x64.ActiveCfg = AppStore|iPhone
 		{6C35C7D3-7501-4274-8062-EF098BCBC3F9}.AppStore|x86.ActiveCfg = AppStore|iPhone
 		{6C35C7D3-7501-4274-8062-EF098BCBC3F9}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{6C35C7D3-7501-4274-8062-EF098BCBC3F9}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{6C35C7D3-7501-4274-8062-EF098BCBC3F9}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{6C35C7D3-7501-4274-8062-EF098BCBC3F9}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{6C35C7D3-7501-4274-8062-EF098BCBC3F9}.Debug|iPhone.Build.0 = Debug|iPhone

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.DataPage">
+    <StackLayout>
+        <ListView ItemsSource="{Binding Items}"
+            CachingStrategy="RecycleElement"
+                  ItemSelected="Handle_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Text="ID: " Grid.Column="0" Grid.Row="0"/>
+                            <Label Text="{Binding Id}" Grid.Column="1" Grid.Row="0"/>
+                            <Label Text="Nombre: " Grid.Column="0" Grid.Row="1"/>
+                            <Label Text="{Binding Dato1}" Grid.Column="1" Grid.Row="1"/>
+                            <Label Text="Apellido: " Grid.Column="0" Grid.Row="2"/>
+                            <Label Text="{Binding Dato2}" Grid.Column="1" Grid.Row="2"/>
+                            <Label Text="Deleted: " Grid.Column="0" Grid.Row="3"/>
+                            <Label Text="{Binding Deleted}" Grid.Column="1" Grid.Row="3"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Iniciar sesion" Clicked="Login"/>
+        <Button x:Name="Boton_Insertar" Text="Insertar nuevo registro" Clicked="Evento_Insertar"/>
+        <Button Text="Mostrar eliminados" Clicked="Eliminados"/>
+    </StackLayout>
+</ContentPage>

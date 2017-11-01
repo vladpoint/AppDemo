@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using App2;
 using Xamarin.Forms;
 
 namespace App2
 {
     public partial class App : Application
     {
+        public static ISQLAzure Authenticator { get; private set; }
+        public static void Init(ISQLAzure authenticator)
+        {
+            Authenticator = authenticator;
+        }
         public App()
         {
             InitializeComponent();
-
-            MainPage = new App2.TESHPage();
+            //MainPage = new NavigationPage(new TESHPage());
+            MainPage = new NavigationPage(new DataPage());
         }
 
         protected override void OnStart()

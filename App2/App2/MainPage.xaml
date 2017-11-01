@@ -2,12 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App2"
-             x:Class="App2.MainPage">
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-        <Label Text="Bienvenidos al TESH" />
-        <Label x:Name="Label1"/>
-        <Entry/>
-        <Button/>
-        <ActivityIndicator Color="Red"/>
-    </StackLayout>
+             x:Class="App2.MainPage"
+             Title="Formulario">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Grid.ColumnSpan="2"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center">Nombre:</Label>
+        <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center">Apellidos:</Label>
+        <Label Grid.Column="0" Grid.Row="2" VerticalOptions="Center">Matricula:</Label>
+        <Entry Grid.Column="1" Grid.Row="0" x:Name="Nombre" ></Entry>
+        <Entry Grid.Column="1" Grid.Row="1" x:Name="Apellidos"></Entry>
+        <Entry Grid.Column="1" Grid.Row="2" x:Name="Matricula" Keyboard="Numeric"></Entry>
+        <Button Grid.Column="0" Grid.Row="3" Text="Enviar Formulario" HorizontalOptions="Center" Clicked="Button_Clicked"/>
+        <Button Grid.Column="1" Grid.Row="3" Text="Editar" Clicked="Button_Clicked_1"></Button>
+    </Grid> 
 </ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Calculadora"
+             Title="Calculadora">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" TextColor="DarkRed" FontSize="Large" FontAttributes="Bold" x:Name="caja" Text="0"/>
+            <Button Grid.Column="0" Grid.Row="1" Text="%" IsVisible="False"/>
+            <Button Grid.Column="1" Grid.Row="1" Text="SQRT" IsVisible="False"/>
+            <Button Grid.Column="2" Grid.Row="1" Text="^2" IsVisible="False"/>
+            <Button Grid.Column="3" Grid.Row="1" Text="1/X" IsVisible="False"/>
+            <Button Grid.Column="0" Grid.Row="2" Text="CE" Clicked="Clearlast_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="2" Text="C" Clicked="Clear_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="2" Text="Next" Clicked="Button_Clicked"/>
+            <Button Grid.Column="3" Grid.Row="2" Text="/" Clicked="Division_Clicked"/>
+            <Button Grid.Column="0" Grid.Row="3" Text="7" Clicked="Siete_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="3" Text="8" Clicked="Ocho_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="3" Text="9" Clicked="Nueve_Clicked"/>
+            <Button Grid.Column="3" Grid.Row="3" Text="X" Clicked="Multiplicacion_Clicked"/>
+            <Button Grid.Column="0" Grid.Row="4" Text="4" Clicked="Cuatro_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="4" Text="5" Clicked="Cinco_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="4" Text="6" Clicked="Seis_Clicked"/>
+            <Button Grid.Column="3" Grid.Row="4" Text="-" Clicked="Resta_Clicked"/>
+            <Button Grid.Column="0" Grid.Row="5" Text="1" Clicked="Uno_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="5" Text="2" Clicked="Dos_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="5" Text="3" Clicked="Tres_Clicked"/>
+            <Button Grid.Column="3" Grid.Row="5" Text="+" Clicked="Suma_Clicked"/>
+            <Button Grid.Column="0" Grid.Row="6" Text="+/-" IsVisible="False"/>
+            <Button Grid.Column="1" Grid.Row="6" Text="0" Clicked="Cero_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="6" Text="." Clicked="Punto_Clicked"/>
+            <Button Grid.Column="3" Grid.Row="6" Text="=" Clicked="Resultado_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
