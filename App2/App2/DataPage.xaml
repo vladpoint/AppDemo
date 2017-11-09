@@ -5,7 +5,9 @@
     <StackLayout>
         <ListView ItemsSource="{Binding Items}"
             CachingStrategy="RecycleElement"
-                  ItemSelected="Handle_ItemSelected">
+                  ItemSelected="Handle_ItemSelected"
+                  IsPullToRefreshEnabled="True"
+                  x:Name="Lista">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

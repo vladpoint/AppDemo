@@ -21,7 +21,7 @@ namespace App2.Droid
             var message = string.Empty;
             try
             {
-                usuario = await App2.DataPage.cliente.LoginAsync(this, MobileServiceAuthenticationProvider.Facebook, "https://tesh.azurewebsites.net/.auth/login/facebook/callback");
+                usuario = await App2.DataPage.cliente.LoginAsync(this, MobileServiceAuthenticationProvider.MicrosoftAccount, "tesh.azurewebsites.net");
                 if (usuario != null)
                 {
                     message = string.Format("Usuario autenticado {0}.",usuario.UserId);

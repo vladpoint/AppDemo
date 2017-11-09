@@ -25,7 +25,7 @@ namespace App2.UWP
         {
             try
             {
-                usuario = await App2.DataPage.cliente.LoginAsync(MobileServiceAuthenticationProvider.MicrosoftAccount,true);
+                usuario = await App2.DataPage.cliente.LoginAsync(MobileServiceAuthenticationProvider.MicrosoftAccount, "tesh.azurewebsites.net");
                 if (usuario != null)
                 {
                     await new MessageDialog(usuario.UserId, "Bienvenido").ShowAsync();

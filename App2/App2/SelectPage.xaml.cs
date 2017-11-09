@@ -41,7 +41,7 @@ namespace App2
                 Dato2 = Entry_Apellido.Text
             };
             await DataPage.Tabla.UpdateAsync(datos);
-            await Navigation.PushAsync(new DataPage());
+            await Navigation.PopAsync();
         }
         private async void Button_Eliminar_Clicked(object sender, EventArgs e)
         {
@@ -52,7 +52,7 @@ namespace App2
                 Dato2 = Entry_Apellido.Text
             };
             await DataPage.Tabla.DeleteAsync(datos);
-            await Navigation.PushAsync(new DataPage());
+            await Navigation.PopAsync();
         }
     }
 }

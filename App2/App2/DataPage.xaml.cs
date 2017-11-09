@@ -35,8 +35,7 @@ namespace App2
             //    Dato2 = "Perez"
             //};
             ////database.Insert(elemento);
-            //Tabla.InsertAsync(elemento);
-            LeerTabla();
+            //Tabla.InsertAsync(elemento);           
         }
         private void Evento_Insertar(object sender, EventArgs e)
         {
@@ -56,23 +55,32 @@ namespace App2
             IEnumerable<TESHDatos> elementos = await Tabla.ToEnumerableAsync();
             Items = new ObservableCollection<TESHDatos>(elementos);
             BindingContext = this;
+            Lista.ItemsSource = Items;
         }
 
         private async void Login(object sender, EventArgs e)
         {
-            usuario = await App.Authenticator.Authenticate();
-            if (App.Authenticator != null)
-            {
-                if (usuario != null)
+            try
+            { 
+                if (App.Authenticator != null)
                 {
-                    await DisplayAlert("Usuario Autenticado", usuario.UserId, "ok");
-                }
-                if (usuario == null)
-                {
-                    Boton_Insertar.IsVisible = false;
-                    Boton_Insertar.IsEnabled = false;
-                }
+                    usuario = await App.Authenticator.Authenticate();
 
+                    if (usuario != null)
+                    {
+                        await DisplayAlert("Usuario Autenticado", usuario.UserId, "ok");
+                        LeerTabla();
+                    }
+                    if (usuario == null)
+                    {
+                        Boton_Insertar.IsVisible = false;
+                        Boton_Insertar.IsEnabled = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "ok");
             }
         }
 
@@ -81,6 +89,15 @@ namespace App2
             IEnumerable<TESHDatos> elementos = await Tabla.IncludeDeleted().ToEnumerableAsync();
             Items = new ObservableCollection<TESHDatos>(elementos);
             BindingContext = this;
+            Lista.ItemsSource = Items.Where(dato => dato.Deleted == true) ;
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (usuario != null)
+            {
+                LeerTabla();
+            }
         }
     }
     

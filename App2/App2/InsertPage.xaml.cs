@@ -30,7 +30,7 @@ namespace App2
             };
             await DataPage.Tabla.InsertAsync(datos);
             //database.Insert(datos);
-            await Navigation.PushAsync(new DataPage());
+            await Navigation.PopAsync();
         }
     }
 }
